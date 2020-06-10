@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aa209a05-81cc-4c1f-90b2-c9eea503aef2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../billing/billing/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../billing/billing/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers/customers/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../customers/customers/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../orders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../orders/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../orders/orders/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../orders/orders/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +85,7 @@
       <updated>1587291738248</updated>
       <workItem from="1587291740337" duration="12840000" />
       <workItem from="1591800602282" duration="220000" />
-      <workItem from="1591800910102" duration="2701000" />
+      <workItem from="1591800910102" duration="2706000" />
     </task>
     <servers />
   </component>
