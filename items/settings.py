@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import items.config as cnfg
+#import items.config as cnfg
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +22,7 @@ IMAGE_DIR = os.path.join(BASE_DIR, 'images')
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = cnfg.secret_key
+SECRET_KEY = 'v&o8j(4^=w735^ee-02frq(3crtn38+uav&-%s81o4ka3l1nn#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'items.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': cnfg.name,
-        'USER': cnfg.user,
-        'PASSWORD': cnfg.password,
+        'NAME': "items_db",
+        'USER': "postgres",
+        'PASSWORD': "password",
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
