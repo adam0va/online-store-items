@@ -13,6 +13,7 @@ class ItemList(ListCreateAPIView):
     def get_queryset(self):
         return Item.objects.all()
 
+    '''
     def post(self, request):
         data = request.data
         serializer = ItemSerializer(data=data)
@@ -21,6 +22,7 @@ class ItemList(ListCreateAPIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    '''
 
 
 class ItemDetail(APIView):
