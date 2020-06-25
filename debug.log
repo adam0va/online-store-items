@@ -80,3 +80,4 @@ Watching for file changes with StatReloader
 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Watching for file changes with StatReloader

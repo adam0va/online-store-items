@@ -23,10 +23,10 @@ class Item(models.Model):
     amount = models.IntegerField(default=0, blank=False)
     category = models.CharField(choices=ITEM_CATEGORY, default=LIPSTICK, max_length=100)
     brand = models.CharField(max_length=100, null=True)
-    colour = models.CharField(max_length=50, null=True)
+    color = models.CharField(max_length=50, null=True)
     price = models.FloatField(default=0)
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(upload_to=f'items/images/', null=True, blank=True)
 
     def __str__(self):
-        return f'{self.name} {self.amount} {self.category}, {self.price}, uuid: {self.uuid}, brand: {self.brand}'
+        return f'{self.name} {self.amount} {self.category}, {self.price}, uuid: {self.uuid}, brand: {self.brand}, color: {self.color}'
