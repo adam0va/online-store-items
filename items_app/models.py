@@ -26,7 +26,8 @@ class Item(models.Model):
     color = models.CharField(max_length=50, null=True)
     price = models.FloatField(default=0)
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    image = models.ImageField(upload_to=f'items/images/', null=True, blank=True)
+    image = models.CharField(max_length=150, null=True)
 
     def __str__(self):
-        return f'{self.name} {self.amount} {self.category}, {self.price}, uuid: {self.uuid}, brand: {self.brand}, color: {self.color}'
+        return f'{self.name} {self.amount} {self.category}, {self.price}, uuid: {self.uuid}, brand: {self.brand}, ' \
+               f'color: {self.color}'

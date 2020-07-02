@@ -54,3 +54,11 @@ class ItemDetail(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
         reader.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+    class ItemListByCategory(ListCreateAPIView):
+        serializer_class = ItemSerializer
+        parser_classes = (MultiPartParser,)
+
+        def get_queryset(self, category):
+            return Item.objects.filter(category=category)
