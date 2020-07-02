@@ -40,7 +40,7 @@ class ItemDetail(APIView):
             reader = Item.objects.get(pk=uuid)
         except Item.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
-        serializer = ItemSerializer(instance=reader, data=request.data)
+        serializer = ItemSerializer(instance=reader, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
@@ -56,9 +56,10 @@ class ItemDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-    class ItemListByCategory(ListCreateAPIView):
-        serializer_class = ItemSerializer
-        parser_classes = (MultiPartParser,)
+class ItemListByCategory(APIView):
+    serializer_class = ItemSerializer
+    parser_classes = (MultiPartParser,)
 
-        def get_queryset(self, category):
-            return Item.objects.filter(category=category)
+    def get_queryset(self, category):
+        print(category)
+        return Item.objects.all().filter(category=category)

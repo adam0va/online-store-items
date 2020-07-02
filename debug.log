@@ -151,3 +151,37 @@ Not Found: /category/eyeliner
 /Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/models.py changed, reloading.
 Watching for file changes with StatReloader
 /Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 15157
+"GET /by_category/Mascara/ HTTP/1.1" 200 15411
+"GET /by_category/Mascara/ HTTP/1.1" 200 303
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /by_category/Mascara/ HTTP/1.1" 200 303
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /by_category/Mascara/
+"GET /by_category/Mascara/ HTTP/1.1" 404 2577
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /by_category/Mascara/
+"GET /by_category/Mascara/ HTTP/1.1" 404 2577
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /by_category/Mascara/
+"GET /by_category/Mascara/ HTTP/1.1" 404 2577
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 15157
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 8192
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+/Users/malenkijkotik/Desktop/progs/rsoi-online-store/online-store-items/items_app/views.py changed, reloading.
+Watching for file changes with StatReloader
