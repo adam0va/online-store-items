@@ -27,7 +27,7 @@ class IsSuperuser(BaseAuthPermission):
         token = self._get_token_from_request(request)
         if token is None:
             return False
-        return AuthRequester().is_superuser(token)[1]
+        return AuthRequester().is_superuser(token)
 
 
 class IsAuthenticated(BaseAuthPermission):
