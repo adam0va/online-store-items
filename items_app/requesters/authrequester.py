@@ -2,7 +2,8 @@ from items_app.requesters.requester import Requester
 
 
 class AuthRequester(Requester):
-    AUTH_HOST = Requester.HOST + ':8004/'
+    #AUTH_HOST = Requester.HOST + ':8004/'
+    AUTH_HOST = 'https://rsoi-online-store-auth.herokuapp.com/'
 
     def _create_auth_header(self, token: str):
         #token_type = 'Bearer' if len(token) < 40 else 'Token'
@@ -25,6 +26,7 @@ class AuthRequester(Requester):
 
     def is_superuser(self, token: str):
         response, status_code = self.get_user_info(token)
+        response = Requester().get_data_from_response(response)
         return response['is_superuser']
 
     def app_get_token(self, app_id: str, app_secret: str):
