@@ -4,6 +4,7 @@ from items_app.models import Item
 from items_app.serializers import ItemSerializer
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.parsers import MultiPartParser
+from items_app.permissions import IsSuperuser
 
 
 class ItemList(ListCreateAPIView):
@@ -35,6 +36,7 @@ class ItemDetail(APIView):
         serializer = ItemSerializer(reader)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    '''
     def patch(self, request, uuid):
         try:
             reader = Item.objects.get(pk=uuid)
@@ -54,12 +56,27 @@ class ItemDetail(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
         reader.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    '''
 
 
-class ItemListByCategory(APIView):
-    serializer_class = ItemSerializer
-    parser_classes = (MultiPartParser,)
+class ItemChange(APIView):
+    permission_classes = (IsSuperuser, )
+    def patch(self, request, uuid):
+        try:
+            reader = Item.objects.get(pk=uuid)
+        except Item.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = ItemSerializer(instance=reader, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get_queryset(self, category):
-        print(category)
-        return Item.objects.all().filter(category=category)
+    def delete(self, request, uuid):
+        try:
+            reader = Item.objects.get(uuid=uuid)
+        except Item.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        reader.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
