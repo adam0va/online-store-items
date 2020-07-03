@@ -9,7 +9,6 @@ from items_app.permissions import IsSuperuser
 
 class ItemList(ListCreateAPIView):
     serializer_class = ItemSerializer
-    parser_classes = (MultiPartParser, )
 
     def get_queryset(self):
         return Item.objects.all()
